@@ -15,7 +15,7 @@
 
 ## Структура проекта
 
-text ip-detector/ ├── .gitignore ├── README.md ├── main.py └── requirements.txt
+''' ip-detector/ ├── .gitignore ├── README.md ├── main.py └── requirements.txt
 
 ## Требования
 

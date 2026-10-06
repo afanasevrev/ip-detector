@@ -270,7 +270,7 @@ ip_detector
 
 5. Загрузит в неё JSON-файл:
 
-``text 
+```text 
 ip_info_20250310_120000.json
 ```
 

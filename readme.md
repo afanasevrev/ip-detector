@@ -59,7 +59,6 @@ https://oauth.yandex.ru/authorize?response_type=token&client_id=CLIENT_ID
 ```text 
 y0_AgAAAAA...
 ```
-Не используйте пример из README как настоящий токен.
 
 ## Установка и запуск на Windows
 

@@ -34,9 +34,9 @@
 
 1. Авторизуйтесь в аккаунте Яндекса.
 2. Откройте страницу создания OAuth-приложения:
-
+'''text
    <https://oauth.yandex.ru/client/new>
-
+'''
 3. Создайте новое приложение.
 4. Укажите название, например: IP Detector
 5. В настройках приложения добавьте доступ к Яндекс.Диску.
@@ -50,16 +50,15 @@
 ### 2. Получение OAuth-токена
 
 Откройте в браузере следующий адрес, заменив `CLIENT_ID` идентификатором созданного приложения:
-
-
+'''text
 https://oauth.yandex.ru/authorize?response_type=token&client_id=CLIENT_ID
-
+'''
 Разрешите приложению доступ к Яндекс.Диску и скопируйте полученный OAuth-токен.
 
 Токен может выглядеть примерно так:
-
-text y0_AgAAAAA...
-
+'''text 
+y0_AgAAAAA...
+'''
 Не используйте пример из README как настоящий токен.
 
 ## Установка и запуск на Windows
@@ -68,14 +67,17 @@ text y0_AgAAAAA...
 
 Откройте PowerShell и выполните:
 
-powershell git clone https://github.com/USERNAME/ip-detector.... cd ip-detector
+'''powershell 
+git clone https://github.com/USERNAME/ip-detector.... cd ip-detector
+'''
 
 Замените `USERNAME` именем владельца репозитория.
 
 Если проект уже загружен на компьютер, перейдите в его каталог:
 
-powershell cd C:\путь\к\ip-detector
-
+'''powershell 
+cd C:\путь\к\ip-detector
+'''
 ### 2. Создание виртуального окружения
 
 powershell python -m venv venv

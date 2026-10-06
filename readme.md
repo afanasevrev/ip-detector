@@ -249,7 +249,9 @@ if [ -n "$YANDEX_DISK_TOKEN" ]; then echo "Токен установлен" else
 
 Можно передать токен только запускаемой программе:
 
-bash YANDEX_DISK_TOKEN="ваш_токен" python main.py
+```bash
+YANDEX_DISK_TOKEN="ваш_токен" python main.py
+```
 
 Переменная не будет сохранена в текущем окружении.
 

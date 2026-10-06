@@ -35,7 +35,7 @@
 1. Авторизуйтесь в аккаунте Яндекса.
 2. Откройте страницу создания OAuth-приложения:
 ```text
-<https://oauth.yandex.ru/client/new>
+https://oauth.yandex.ru/client/new
 ```
 3. Создайте новое приложение.
 4. Укажите название, например: IP Detector

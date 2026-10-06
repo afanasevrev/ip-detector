@@ -67,10 +67,10 @@ y0_AgAAAAA...
 Откройте PowerShell и выполните:
 
 ```powershell 
-git clone https://github.com/USERNAME/ip-detector.... cd ip-detector
-```
+git clone https://github.com/afanasevrev/ip-detector.git
 
-Замените `USERNAME` именем владельца репозитория.
+cd ip-detector
+```
 
 Если проект уже загружен на компьютер, перейдите в его каталог:
 
@@ -178,7 +178,9 @@ python main.py
 ### 1. Клонирование репозитория
 
 ```bash
-git clone https://github.com/USERNAME/ip-detector.... cd ip-detector
+git clone https://github.com/afanasevrev/ip-detector.git
+
+cd ip-detector
 ```
 
 Если проект уже загружен, перейдите в его каталог:

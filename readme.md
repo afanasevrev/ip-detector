@@ -276,9 +276,20 @@ ip_info_20250310_120000.json
 
 Пример содержимого JSON-файла:
 
-```json
-{ "requested_at": "2025-03-10T12:00:00+00:00", "ip": "188.242.138.63", "geo": { "ip": "188.242.138.63", "city": "Saint Petersburg", "region": "St.-Petersburg", "country": "RU", "loc": "59.9386,30.3141", "postal": "190000", "timezone": "Europe/Moscow" } }
-```
+json
+{
+"requested_at": "2025-03-10T12:00:00+00:00",
+"ip": "188.242.138.63",
+"geo": {
+"ip": "188.242.138.63",
+"city": "Saint Petersburg",
+"region": "St.-Petersburg",
+"country": "RU",
+"loc": "59.9386,30.3141",
+"postal": "190000",
+"timezone": "Europe/Moscow" }
+}
+
 
 ## Возможные ошибки
 

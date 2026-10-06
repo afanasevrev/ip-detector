@@ -34,9 +34,9 @@
 
 1. Авторизуйтесь в аккаунте Яндекса.
 2. Откройте страницу создания OAuth-приложения:
-'''text
-   <https://oauth.yandex.ru/client/new>
-'''
+```text
+<https://oauth.yandex.ru/client/new>
+```
 3. Создайте новое приложение.
 4. Укажите название, например: IP Detector
 5. В настройках приложения добавьте доступ к Яндекс.Диску.
@@ -50,15 +50,15 @@
 ### 2. Получение OAuth-токена
 
 Откройте в браузере следующий адрес, заменив `CLIENT_ID` идентификатором созданного приложения:
-'''text
+```text
 https://oauth.yandex.ru/authorize?response_type=token&client_id=CLIENT_ID
-'''
+```
 Разрешите приложению доступ к Яндекс.Диску и скопируйте полученный OAuth-токен.
 
 Токен может выглядеть примерно так:
-'''text 
+```text 
 y0_AgAAAAA...
-'''
+```
 Не используйте пример из README как настоящий токен.
 
 ## Установка и запуск на Windows
@@ -67,42 +67,53 @@ y0_AgAAAAA...
 
 Откройте PowerShell и выполните:
 
-'''powershell 
+```powershell 
 git clone https://github.com/USERNAME/ip-detector.... cd ip-detector
-'''
+```
 
 Замените `USERNAME` именем владельца репозитория.
 
 Если проект уже загружен на компьютер, перейдите в его каталог:
 
-'''powershell 
+```powershell 
 cd C:\путь\к\ip-detector
-'''
+```
 ### 2. Создание виртуального окружения
 
-powershell python -m venv venv
+```powershell
+python -m venv venv
+```
 
 ### 3. Активация виртуального окружения
 
 В PowerShell:
 
-powershell .\venv\Scripts\Activate.ps1
+```powershell
+.\venv\Scripts\Activate.ps1
+```
 
 Если PowerShell запрещает выполнение скриптов, временно разрешите их для текущего процесса:
 
-powershell Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+```powershell
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+```
 
 Затем повторите активацию:
 
+```
 powershell .\venv\Scripts\Activate.ps1
+```
 
 В командной строке CMD используйте:
 
-cmd venv\Scripts\activate.bat
-
+```cmd
+venv\Scripts\activate.bat
+```
 После активации в командной строке появится обозначение виртуального окружения:
 
-text (venv)
+```text
+(venv)
+```
 
 ### 4. Установка зависимостей
 

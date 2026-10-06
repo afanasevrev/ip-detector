@@ -100,8 +100,8 @@ Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
 
 Затем повторите активацию:
 
-```
-powershell .\venv\Scripts\Activate.ps1
+```powershell
+.\venv\Scripts\Activate.ps1
 ```
 
 В командной строке CMD используйте:
@@ -117,29 +117,39 @@ venv\Scripts\activate.bat
 
 ### 4. Установка зависимостей
 
-powershell python -m pip install --upgrade pip python -m pip install -r requirements.txt
+```powershell 
+python -m pip install --upgrade pip python -m pip install -r requirements.txt
+```
 
 ### 5. Создание переменной окружения в PowerShell
 
 Чтобы установить токен только для текущего окна PowerShell:
 
-powershell $env:YANDEX_DISK_TOKEN="ваш_токен"
+```powershell 
+$env:YANDEX_DISK_TOKEN="ваш_токен"
+```
 
 Запустите программу:
 
-powershell python main.py
+```powershell
+python main.py
+```
 
 После закрытия окна PowerShell переменная будет удалена.
 
 Проверить наличие переменной без вывода самого токена:
 
-powershell if ($env:YANDEX_DISK_TOKEN) { Write-Host "Токен установлен" } else { Write-Host "Токен не установлен" }
+```powershell
+if ($env:YANDEX_DISK_TOKEN) { Write-Host "Токен установлен" } else { Write-Host "Токен не установлен" }
+```
 
 ### 6. Создание переменной окружения в CMD
 
 Для текущего окна CMD:
 
-cmd set YANDEX_DISK_TOKEN=ваш_токен python main.py
+```cmd
+set YANDEX_DISK_TOKEN=ваш_токен python main.py
+```
 
 После закрытия CMD переменная будет удалена.
 
@@ -147,69 +157,93 @@ cmd set YANDEX_DISK_TOKEN=ваш_токен python main.py
 
 Чтобы сохранить переменную окружения для текущего пользователя:
 
-powershell setx YANDEX_DISK_TOKEN "ваш_токен"
-
+```powershell
+setx YANDEX_DISK_TOKEN "ваш_токен"
+```
 После выполнения команды закройте терминал и откройте новое окно PowerShell.
 
 Запустите программу:
 
-powershell python main.py
+```powershell
+python main.py
+```
 
 Чтобы удалить постоянную переменную:
 
-powershell [Environment]::SetEnvironmentVariable( "YANDEX_DISK_TOKEN", $null, "User" )
+```powershell
+[Environment]::SetEnvironmentVariable( "YANDEX_DISK_TOKEN", $null, "User" )
+```
 
 ## Установка и запуск на Linux
 
 ### 1. Клонирование репозитория
 
-bash git clone https://github.com/USERNAME/ip-detector.... cd ip-detector
+```bash
+git clone https://github.com/USERNAME/ip-detector.... cd ip-detector
+```
 
 Если проект уже загружен, перейдите в его каталог:
 
-bash cd /путь/к/ip-detector
-
+```bash
+cd /путь/к/ip-detector
+```
 ### 2. Установка Python
 
 Для Ubuntu или Debian:
 
-bash sudo apt update sudo apt install python3 python3-pip python3-venv
+```bash
+sudo apt update sudo apt install python3 python3-pip python3-venv
+```
 
 ### 3. Создание виртуального окружения
 
-bash python3 -m venv venv
+```bash
+python3 -m venv venv
+```
 
 ### 4. Активация виртуального окружения
 
-bash source venv/bin/activate
+```bash
+source venv/bin/activate
+```
 
 После активации появится обозначение:
-
-text (venv)
+```text
+(venv)
+```
 
 ### 5. Установка зависимостей
 
-bash python -m pip install --upgrade pip python -m pip install -r requirements.txt
+```bash
+python -m pip install --upgrade pip python -m pip install -r requirements.txt
+```
 
 ### 6. Создание временной переменной окружения
 
 Установите токен для текущего терминала:
 
-bash export YANDEX_DISK_TOKEN="ваш_токен"
-
+```bash
+export YANDEX_DISK_TOKEN="ваш_токен"
+```
 Запустите программу:
 
-bash python main.py
+```bash
+python main.py
+```
 
 Если команда `python` недоступна:
 
-bash python3 main.py
+```bash
+python3 main.py
+```
 
 После закрытия терминала переменная будет удалена.
 
 Проверить наличие переменной без вывода токена:
 
-bash if [ -n "$YANDEX_DISK_TOKEN" ]; then echo "Токен установлен" else echo "Токен не установлен" fi
+```bash
+if [ -n "$YANDEX_DISK_TOKEN" ]; then echo "Токен установлен" else echo "Токен не установлен" fi
+```
 
 ### 7. Запуск с токеном одной командой
 
@@ -218,36 +252,6 @@ bash if [ -n "$YANDEX_DISK_TOKEN" ]; then echo "Токен установлен"
 bash YANDEX_DISK_TOKEN="ваш_токен" python main.py
 
 Переменная не будет сохранена в текущем окружении.
-
-### 8. Постоянная переменная окружения в Bash
-
-Откройте файл `~/.bashrc`:
-
-bash nano ~/.bashrc
-
-Добавьте в конец файла:
-
-bash export YANDEX_DISK_TOKEN="ваш_токен"
-
-Сохраните файл и примените изменения:
-
-bash source ~/.bashrc
-
-### 9. Постоянная переменная окружения в Zsh
-
-Откройте файл `~/.zshrc`:
-
-bash nano ~/.zshrc
-
-Добавьте:
-
-bash export YANDEX_DISK_TOKEN="ваш_токен"
-
-Примените изменения:
-
-bash source ~/.zshrc
-
-Токен будет храниться в текстовом конфигурационном файле пользователя. Не добавляйте файлы с секретными данными в Git-репозиторий.
 
 ## Результат работы
 
@@ -258,17 +262,23 @@ bash source ~/.zshrc
 3. Создаст временный JSON-файл.
 4. Создаст на Яндекс.Диске папку:
 
-text ip_detector
+```text
+ip_detector
+```
 
 5. Загрузит в неё JSON-файл:
 
-text ip_info_20250310_120000.json
+``text 
+ip_info_20250310_120000.json
+```
 
 6. Удалит временный локальный файл.
 
 Пример содержимого JSON-файла:
 
-json { "requested_at": "2025-03-10T12:00:00+00:00", "ip": "188.242.138.63", "geo": { "ip": "188.242.138.63", "city": "Saint Petersburg", "region": "St.-Petersburg", "country": "RU", "loc": "59.9386,30.3141", "postal": "190000", "timezone": "Europe/Moscow" } }
+```json
+{ "requested_at": "2025-03-10T12:00:00+00:00", "ip": "188.242.138.63", "geo": { "ip": "188.242.138.63", "city": "Saint Petersburg", "region": "St.-Petersburg", "country": "RU", "loc": "59.9386,30.3141", "postal": "190000", "timezone": "Europe/Moscow" } }
+```
 
 ## Возможные ошибки
 
@@ -276,17 +286,21 @@ json { "requested_at": "2025-03-10T12:00:00+00:00", "ip": "188.242.138.63", "geo
 
 Ошибка:
 
-text Не задана переменная окружения YANDEX_DISK_TOKEN.
+```text
+Не задана переменная окружения YANDEX_DISK_TOKEN.
 
 Установите переменную окружения и повторите запуск.
+```
 
 Windows PowerShell:
-
-powershell $env:YANDEX_DISK_TOKEN="ваш_токен" python main.py
+```powershell
+$env:YANDEX_DISK_TOKEN="ваш_токен" python main.py
+```
 
 Linux:
-
-bash export YANDEX_DISK_TOKEN="ваш_токен" python main.py
+```bash
+export YANDEX_DISK_TOKEN="ваш_токен" python main.py
+```
 
 ### Ошибка 401 Unauthorized
 
@@ -315,36 +329,3 @@ OAuth-приложению не хватает прав для записи на
 - доступность `ipinfo.io`;
 - доступность `cloud-api.yandex.net`;
 - настройки VPN, прокси, антивируса и брандмауэра.
-
-## Безопасность
-
-Файл `.gitignore` должен содержать:
-
-gitignore
-Virtual environments
-venv/ .venv/
-Python
-pycache/ *.py[cod]
-Environment files
-.env .env.* !.env.example
-IDE
-.idea/ .vscode/
-
-Перед отправкой проекта в GitHub проверьте файлы:
-
-bash git status git diff
-
-Выполните поиск возможного токена:
-
-bash git grep "y0_"
-
-Если настоящий токен уже был отправлен в GitHub:
-
-1. Отзовите скомпрометированный токен.
-2. Получите новый токен.
-3. Удалите токен из исходного кода и истории Git.
-4. Храните новый токен только в переменной окружения.
-
-Простого удаления токена из последнего коммита недостаточно, потому что он может остаться в истории репозитория.
-
-`
